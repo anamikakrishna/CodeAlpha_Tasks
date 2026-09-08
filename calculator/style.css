@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+
+/* Calculator box */
+
+.calculator {
+    width: 350px;
+
+    padding: 20px;
+
+    background: #222;
+
+    border-radius: 20px;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+
+/* Display */
+
+#display {
+    width: 100%;
+
+    height: 75px;
+
+    margin-bottom: 20px;
+
+    padding: 10px 15px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #f5f5f5;
+
+    color: #111;
+
+    font-size: 32px;
+
+    text-align: right;
+
+    outline: none;
+}
+
+
+/* Buttons layout */
+
+.buttons {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 10px;
+}
+
+
+/* Buttons */
+
+button {
+    height: 60px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #444;
+
+    color: white;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+/* Hover effect */
+
+button:hover {
+    transform: scale(1.05);
+
+    background: #555;
+}
+
+
+/* Click effect */
+
+button:active {
+    transform: scale(0.95);
+}
+
+
+/* Operators */
+
+.operator {
+    background: #ff9500;
+}
+
+.operator:hover {
+    background: #ffad33;
+}
+
+
+/* Clear button */
+
+.clear {
+    background: #e74c3c;
+}
+
+.clear:hover {
+    background: #ff6252;
+}
+
+
+/* Equal button */
+
+.equal {
+    background: #27ae60;
+}
+
+.equal:hover {
+    background: #35c973;
+}
+
+
+/* Zero button */
+
+.zero {
+    grid-column: span 2;
+}
+
+
+/* Mobile responsive */
+
+@media (max-width: 400px) {
+
+    .calculator {
+        width: 90%;
+    }
+
+    button {
+        height: 55px;
+        font-size: 20px;
+    }
+
+    #display {
+        font-size: 27px;
+    }
+}
